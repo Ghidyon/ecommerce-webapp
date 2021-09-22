@@ -43,7 +43,9 @@ namespace WebApp
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseRouting();
+            app.UseMiddleware<TestMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
